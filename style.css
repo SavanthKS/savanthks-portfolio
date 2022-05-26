@@ -130,15 +130,17 @@
     font-weight: 600;
 }
 
+
+
+/* style for all section */
+
 section {
     padding: 100px 0;
-}
-
-.about {
     font-family: 'poppins', sans-serif;
 }
 
-.about .title {
+
+section .title {
     position: relative;
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
@@ -148,7 +150,7 @@ section {
     padding-bottom: 20px;
 }
 
-.about .title::before {
+section .title::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -159,8 +161,7 @@ section {
     transform: translateX(-50%);
 }
 
-.about .title::after {
-    content: "Who am I";
+section .title::after {
     position: absolute;
     bottom: -12px;
     left: 50%;
@@ -171,11 +172,15 @@ section {
     transform: translateX(-50%);
 }
 
+
+/* about section styling */
+
+.about .title::after{
+    content: "Who am I";
+}
+
 .about .about-content .left-right {
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
-
 }
 
 .about .about-content .left {
@@ -192,10 +197,6 @@ section {
 
 }
 
-.responsive {
-    height: 100%;
-    width: auto;
-}
 
 .about .about-content .right {
     width: 55%;
@@ -216,6 +217,57 @@ section {
     text-align: justify;
 }
 
+
+/* profession section */
+.profession{
+    color: #fff;
+    background: #111;
+}
+.profession .title::before{
+    background: #fff;
+}
+.profession .title::after{
+    background: #111;
+    content: "What I do";
+}
+.profession .prof-content .the-boxes{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.profession .prof-content .card{
+    width: calc(30% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;    
+    transition: all 0.3s ease;
+}
+.profession .prof-content .card:hover{
+    background: crimson;
+}
+.profession .prof-content .card .box{
+    transition: all 0.3s ease;
+}
+.profession .prof-content .card:hover .box{
+    transform: scale(1.05);
+}
+
+.profession .prof-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.profession .prof-content .card:hover i{
+    color: #fff;
+}
+.profession .prof-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
 
 
 
@@ -243,6 +295,15 @@ section {
         height: 350px;
         width: 350px;
     }
+    .profession .prof-content .the-boxes{       
+        display: grid;      
+        
+    }
+    .profession .prof-content .card{
+        width: 100%;        
+        margin-bottom: 20px;           
+       
+    }
 }
 
 @media(max-width:980px) {
@@ -263,6 +324,7 @@ section {
     .about .about-content .right {   
         flex: 100%;
     }
+ 
 
 
 }
@@ -327,6 +389,7 @@ section {
     .about .about-content .left-right .left{     
         padding-right: 350px;
     }
+
 }
 
 @media(max-width:755px) {
