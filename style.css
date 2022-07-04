@@ -245,7 +245,7 @@ section .title::after {
 }
 
 
-/* profession section */
+/* profession or interest section */
 .profession{
     color: #fff;
     background: #111;
@@ -255,7 +255,7 @@ section .title::after {
 }
 .profession .title::after{
     background: #111;
-    content: "What I do";
+    content: "What I like to do";
 }
 .profession .prof-content .the-boxes{
     display: flex;
