@@ -65,6 +65,7 @@ html{
 }
 
 .navbar .menu li a {
+    display: block;
     color: black;
     font-size: 18px;
     font-weight: 900;
@@ -81,7 +82,7 @@ html{
 }
 
 .navbar.sticky .menu li a:hover {
-    color: rgb(64, 118, 233);
+    color: #111;
 }
 
 .menu-btn {
@@ -526,6 +527,9 @@ footer span a :hover{
         color: white;
         margin: 20px 0;
         font-size: 30px;
+    }
+    .navbar.sticky .menu li a:hover {
+        color: crimson;
     }
 
     .home .home-content .text-2 {
